@@ -21,6 +21,10 @@ main{
 }
 h2{
 	font-size: 1.5em;
+	text-shadow: 3px 3px #cccccc;
+}
+p{
+	font-weight: bold;
 }
 
 
@@ -79,6 +83,7 @@ h1{
 
 /* Infos générales */
 .infos{
+	margin: 0 0 30px 0;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
@@ -89,22 +94,13 @@ h1{
 	grid-row-start: 1;
 	text-align: center;
 }
+
 .infos:nth-child(2) {
 	display: block;
 	background-color: red;
 	grid-column-start: 2;
 	grid-row-start: 2;
 }
-.infos:nth-child(3) {
-	grid-column-start: 1;
-	grid-row-start: 2;
-}
-
-.infos:nth-child(4) {
-	grid-column-start: 1;
-	grid-row-start: 2;
-}
-
 
 /* Chronological lists */
 .chronological{
@@ -119,8 +115,54 @@ h1{
 }
 .chronological li:nth-child(even){
 	padding: 0 0 10px 0;
-	font-family: "Fraunces", sans-serif;
-	
+	font-family: "Fraunces", sans-serif;	
+}
+#info_1{
+	display: block;
+	grid-column-start:1;
+	grid-row-start:2;
+}
+#info_2{
+	display: block;
+	grid-column-start:2;
+	grid-row-start:2;
+}
+#info_3{
+	display: block;
+	grid-column-start:3;
+	grid-row-start:2;
 }
 
-/**/
+
+
+
+
+/* compétences */ 
+.skills ul li{
+	padding: 0 0 15px 0; 
+ 	list-style-type: disc;
+}
+
+/*footer*/
+footer{
+	padding: 20px 10px;
+	background-color: #3c6382;
+	text-align: center;
+}
+footer{
+	color: white;
+	font-weight: bold;
+}
+footer a{
+	padding: 10px 0 10px 0;
+	display: inline-block;
+	color: white;
+	text-shadow: 3px 3px #0a3d62;
+}
+footer a:hover{
+	color: #60a3bc;
+}
+footer h2{
+	text-shadow: 3px 3px #0a3d62;
+}
+	
