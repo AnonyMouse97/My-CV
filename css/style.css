@@ -1,67 +1,126 @@
-header{
-	display: grid;
-	grid-template-columns: 20% 20% 20% 20% 20%;
-	grid-template-rows: 70% 30%;
+h1,h2,h3{
+	margin: 0;
 }
-header li{
-	
-}
-.Formation{
-	grid-row-start: 1;
-	display: block;
-}
-.Expérience{
-	grid-row-start: 3;
-	display: block;
-}
-
-
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+body{
+	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+ul{
+	padding: 0;
+	margin:0;
+}
+li{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+main{
+	padding: 30px;
+}
+h2{
+	font-size: 1.5em;
+}
+
+
+/* header grid system*/
+
+header ul{
+	display: grid;
+	grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+}
+
+.Formation{
+	grid-column-start: 1;
+}
+.Expériences{
+	grid-column-start: 2;
+}
+.Compétences{
+	grid-column-start: 4;
+}
+
+/* Header style*/
+header{
+	background-color: #3c6382;
+	padding: 20px 10px;
+} 
+header ul>li{
+	margin: auto 0;
+
+}
+header ul>li>a{
+	padding: 5px;
+	width: 200px;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: white;
+	text-align: center;
 	display: block;
+	text-shadow: 3px 3px #0a3d62;
 }
-body {
-	line-height: 1;
+header ul>li>a:hover{
+	color: #60a3bc;
 }
-ol, ul {
-	list-style: none;
+header img{
+	border-radius: 50%;
+	margin: 0 auto;
+	display: block;
+	box-shadow: 10px 10px #0a3d62;
 }
-blockquote, q {
-	quotes: none;
+h1{
+	margin: 30px 0 10px 0;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	text-align: center;
+	text-shadow: 3px 3px #0a3d62;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+/* Infos générales */
+.infos{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+.infos h2{
+	grid-column-start: 2;
+	grid-row-start: 1;
+	text-align: center;
 }
+.infos:nth-child(2) {
+	display: block;
+	background-color: red;
+	grid-column-start: 2;
+	grid-row-start: 2;
+}
+.infos:nth-child(3) {
+	grid-column-start: 1;
+	grid-row-start: 2;
+}
+
+.infos:nth-child(4) {
+	grid-column-start: 1;
+	grid-row-start: 2;
+}
+
+
+/* Chronological lists */
+.chronological{
+	margin: 0 0 30px;
+}
+.chronological h2, .skills h2, p{
+	text-align: center;
+}
+.chronological li:nth-child(odd){
+	font-weight: bold;
+	font-size: 1.1em;
+}
+.chronological li:nth-child(even){
+	padding: 0 0 10px 0;
+	font-family: "Fraunces", sans-serif;
+	
+}
+
+/**/
